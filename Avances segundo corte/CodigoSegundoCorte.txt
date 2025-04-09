@@ -1,0 +1,260 @@
+create database Santiago;
+use Santiago;
+create table Usuario(
+documentoUsu int primary key,
+nombreUsu varchar(40) not null,
+tipoUsu enum('Administrador','Zootecnista','Veterinario','Trabajador Agrícola') not null, 
+correoUsu varchar(40) not null,
+descripcionActividadUsu varchar(50) not null
+);
+
+create table Animal(
+idAnimal int AUTO_INCREMENT primary key,
+nombreAnimal varchar(10) not null,
+fechaDeNacimiento date not null,
+fechaDeCargue date not null,
+estadoDeSalud enum('Sano','Enfermo') not null,
+cantConcentradoAnimal float not null,
+edadAnimal int not null,
+fechaUltimoParto date not null,
+cantParto int not null
+);
+
+create table Terreno(
+idTerreno int AUTO_INCREMENT primary key,
+nombreTerreno varchar(10) not null,
+estadoTerreno enum ('Apto', 'No apto') not null,
+fechaIngreso date not null,
+fechaSalida date not null,
+diasTerreno int
+);
+
+create table Produccion(
+fechaRegistro timestamp primary key,
+cantLitrosMañanaAnimal int not null,
+cantLitrosTardeAnimal int not null,
+cantLitrosDiaAnimal int not null,
+idAnimalFK int not null,
+documentoUsuFK int not null,
+idTerrenoFK int not null
+); 
+
+/Unir las llaves foraneas/
+ALTER TABLE Produccion add constraint FKidTerreno FOREIGN KEY(idTerrenoFK) REFERENCES Terreno(idTerreno);
+ALTER TABLE Produccion add constraint FKdocumentoUsu FOREIGN KEY(documentoUsuFK) REFERENCES Usuario(documentoUsu);
+ALTER TABLE Produccion add constraint FKidAnimal FOREIGN KEY (idAnimalFK) REFERENCES Animal(idAnimal);
+
+/Código ANIMAL/
+
+-- RQF040/*Trigger que actualizara la cantidad de partos
+DELIMITER //
+CREATE TRIGGER registrarPartosAnimal
+BEFORE UPDATE ON Animal
+FOR EACH ROW
+BEGIN
+    IF NEW.fechaUltimoParto <> OLD.fechaUltimoParto THEN
+	SET NEW.cantParto = OLD.cantParto + 1;
+    END IF;
+END //
+DELIMITER ;
+
+DELIMITER //
+
+/Procedimiento registrar animal/
+CREATE PROCEDURE registrarAnimal(
+	IN p_nombreAnimal varchar(10),
+		p_fechaDeNacimiento date, 
+		p_fechaDeCargue date, 
+        p_estadoDeSalud enum('Sano','Enfermo'), 
+        p_cantConcentradoAnimal float, 
+        p_fechaUltimoParto date
+)
+BEGIN
+	DECLARE edadAnimal int;
+    DECLARE cantParto int;
+    
+		SET edadAnimal=TIMESTAMPDIFF(year,p_fechaDeNacimiento,CURDATE());
+        
+		IF cantParto is null then
+			SET cantParto=1;
+		END IF;
+		
+        INSERT INTO Animal (
+        nombreAnimal,
+        fechaDeNacimiento,
+        fechaDeCargue,
+        estadoDeSalud,
+        cantConcentradoAnimal,
+        edadAnimal,
+        fechaUltimoParto,
+        cantParto
+    )
+    VALUES (
+        p_nombreAnimal,
+        p_fechaDeNacimiento,
+        p_fechaDeCargue,
+        p_estadoDeSalud,
+        p_cantConcentradoAnimal,
+        edadAnimal,
+        p_fechaUltimoParto,
+        cantParto);
+END //
+DELIMITER ;
+
+CALL registrarAnimal('ENRIQUETA', '2018-06-15', '2020-08-10', 'Sano', 4.5, '2023-07-01');
+CALL registrarAnimal('MOJOSA', '2017-09-22', '2019-11-03', 'Enfermo', 3.8, '2022-05-14');
+CALL registrarAnimal('PALOMA', '2019-03-30', '2021-06-21', 'Sano', 5.2, '2024-02-18');
+CALL registrarAnimal('YERJOL', '2020-01-12', '2022-04-09', 'Sano', 4.1, '2023-09-05');
+CALL registrarAnimal('PRESUMIDA', '2016-07-08', '2018-09-30', 'Sano', 4.7, '2022-12-11');
+CALL registrarAnimal('ALEJANDRA', '2018-11-05', '2020-12-15', 'Enfermo', 3.6, '2023-03-20');
+CALL registrarAnimal('MALU', '2017-05-18', '2019-07-27', 'Sano', 5.0, '2024-01-30');
+CALL registrarAnimal('COSTEÑA', '2019-08-11', '2021-10-03', 'Sano', 4.2, '2023-11-14');
+CALL registrarAnimal('GOMELA HIJA', '2020-02-25', '2022-06-19', 'Sano', 3.9, '2023-06-07');
+CALL registrarAnimal('ROCOLA HIJA', '2018-04-17', '2020-05-23', 'Enfermo', 4.3, '2023-08-22');
+CALL registrarAnimal('JERSY HIJA', '2019-09-05', '2021-11-29', 'Sano', 4.9, '2023-12-08');
+CALL registrarAnimal('VARETO HIJA', '2017-12-20', '2019-04-15', 'Sano', 5.5, '2022-10-30');
+CALL registrarAnimal('FLACA', '2021-03-10', '2023-05-18', 'Enfermo', 3.5, '2024-03-21');
+CALL registrarAnimal('CARETA', '2016-11-30', '2018-12-09', 'Sano', 4.6, '2021-09-10');
+CALL registrarAnimal('MECHAS', '2020-07-01', '2022-08-15', 'Sano', 4.8, '2023-10-05');
+CALL registrarAnimal('VILLAMIL', '2019-05-28', '2021-07-17', 'Sano', 3.7, '2023-04-22');
+CALL registrarAnimal('CACHIPORRA', '2018-08-09', '2020-09-13', 'Enfermo', 3.9, '2022-11-19');
+CALL registrarAnimal('NUBIA', '2017-06-14', '2019-08-28', 'Sano', 4.4, '2023-06-30');
+CALL registrarAnimal('TARZÁN', '2019-12-05', '2021-12-25', 'Sano', 4.0, '2023-07-15');
+CALL registrarAnimal('TROMPITA', '2020-11-09', '2022-12-17', 'Sano', 5.1, '2024-02-01');
+CALL registrarAnimal('PAJARITO', '2016-05-19', '2018-07-22', 'Enfermo', 3.2, '2021-12-14');
+CALL registrarAnimal('CHISPAS', '2018-02-14', '2020-03-19', 'Sano', 4.5, '2023-09-25');
+CALL registrarAnimal('ZANAHORIA', '2019-07-30', '2021-09-10', 'Sano', 4.3, '2023-12-20');
+CALL registrarAnimal('MORCILLA', '2017-10-11', '2019-12-15', 'Sano', 5.0, '2022-08-09');
+CALL registrarAnimal('TOTUMA', '2020-09-17', '2022-10-25', 'Enfermo', 3.6, '2024-01-07');
+CALL registrarAnimal('CACHO LOCO', '2018-12-28', '2021-02-10', 'Sano', 4.9, '2023-05-23');
+CALL registrarAnimal('TIBURÓN', '2016-08-05', '2018-10-12', 'Enfermo', 3.3, '2022-07-14');
+CALL registrarAnimal('BEBÉ', '2019-02-22', '2021-04-05', 'Sano', 4.7, '2023-10-19');
+CALL registrarAnimal('LLOVIZNA', '2017-04-29', '2019-06-13', 'Sano', 5.3, '2023-01-14');
+CALL registrarAnimal('AZUCARITA', '2018-05-12', '2020-06-27', 'Sano', 4.1, '2022-09-05');
+CALL registrarAnimal('MANCHITAS', '2020-04-21', '2022-07-01', 'Sano', 4.2, '2023-12-31');
+CALL registrarAnimal('LUMBER', '2016-09-15', '2018-11-18', 'Enfermo', 3.4, '2021-11-08');
+CALL registrarAnimal('CHOCOLATINA', '2019-10-07', '2021-12-20', 'Sano', 4.8, '2023-06-03');
+CALL registrarAnimal('CAFÉ', '2020-08-29', '2022-09-30', 'Sano', 5.2, '2024-03-11');
+CALL registrarAnimal('RAYITO', '2017-11-03', '2019-12-14', 'Enfermo', 3.5, '2022-10-01');
+CALL registrarAnimal('PINTA', '2018-03-23', '2020-04-27', 'Sano', 4.6, '2023-02-17');
+CALL registrarAnimal('GALLO', '2019-06-18', '2021-08-24', 'Sano', 5.0, '2023-07-09');
+CALL registrarAnimal('RUMBA', '2016-07-20', '2018-08-30', 'Sano', 4.3, '2021-10-25');
+CALL registrarAnimal('CAMILA', '2020-10-13', '2022-11-22', 'Sano', 4.0, '2023-11-06');
+CALL registrarAnimal('MELCOCHA', '2019-01-28', '2021-03-09', 'Enfermo', 3.7, '2023-04-28');
+CALL registrarAnimal('POLVO', '2017-05-10', '2019-07-20', 'Sano', 4.9, '2023-09-18');
+CALL registrarAnimal('JUGUETE', '2018-09-08', '2020-10-19', 'Sano', 4.2, '2023-01-10');
+CALL registrarAnimal('LACRA', '2021-02-05', '2023-03-14', 'Enfermo', 3.8, '2024-02-24');
+CALL registrarAnimal('PACA', '2018-03-23', '2020-04-27', 'Sano', 4.6, '2023-02-17');
+CALL registrarAnimal('LORETA', '2019-06-18', '2021-08-24', 'Sano', 5.0, '2023-07-09');
+CALL registrarAnimal('ROMA', '2016-07-20', '2018-08-30', 'Sano', 4.3, '2021-10-25');
+CALL registrarAnimal('SARA', '2020-10-13', '2022-11-22', 'Sano', 4.0, '2023-11-06');
+CALL registrarAnimal('SASHA', '2019-01-28', '2021-03-09', 'Enfermo', 3.7, '2023-04-28');
+CALL registrarAnimal('LARA', '2017-05-10', '2019-07-20', 'Sano', 4.9, '2023-09-18');
+CALL registrarAnimal('MACARENA', '2018-09-08', '2020-10-19', 'Sano', 4.2, '2023-01-10');
+
+-- RQF014 |Vista para el nombre del animal
+CREATE VIEW vistaNombreAnimal AS
+SELECT nombreAnimal
+FROM Animal;
+select * from vistaNombreAnimal;
+
+-- RQF015 |Vista para la edad del animal
+CREATE VIEW vistaEdadAnimal AS
+SELECT nombreAnimal, edadAnimal
+FROM Animal;
+select * from vistaEdadAnimal;
+
+-- RQF016 |Vista para la ultima fecha del cargue del animal
+CREATE VIEW vistaFechaDeCargueAnimal AS
+SELECT nombreAnimal, FechaDeCargue
+FROM Animal;
+select * from vistaFechaDeCargueAnimal;
+
+-- RQF017 |Vista para el estado de salud del animal
+CREATE VIEW vistaSaludAnimal AS
+SELECT nombreAnimal, estadoDeSalud
+FROM Animal;
+select * from vistaSaludAnimal;
+
+-- RQF018 |Vista para la cantidad de concentrado suministrado al animal
+CREATE VIEW vistaCantConcentradoAnimal AS
+SELECT nombreAnimal, CantConcentradoAnimal
+FROM Animal;
+select * from vistaCantConcentradoAnimal;
+
+-- RQF019 |Procedure que modifica el estado de salud del animal
+DELIMITER //
+CREATE PROCEDURE modificarSaludAnimal(
+	IN a_nombreAnimal varchar(10),
+    IN a_estadoDeSalud varchar(10)
+)
+BEGIN
+	UPDATE Animal
+		SET estadoDeSalud = a_estadoDeSalud
+        where nombreAnimal = a_nombreAnimal;
+END //
+DELIMITER ;
+CALL modificarSaludAnimal('ENRIQUETA','ENFERMO');
+
+-- RQF020 |Procedure que modifica la cantidad de concentrado suministrado al animal
+DELIMITER //
+CREATE PROCEDURE modificarCantConcentradoAnimal(
+	IN a_nombreAnimal varchar(10),
+    IN a_cantConcentradoAnimal float
+)
+BEGIN
+	UPDATE Animal
+		SET cantConcentradoAnimal = a_cantConcentradoAnimal
+        where nombreAnimal = a_nombreAnimal;
+END //
+DELIMITER ;
+CALL modificarCantConcentradoAnimal('ENRIQUETA',5.3);
+
+
+-- RQF041 |Procedure que modifica la fecha del ultimo parto del animal
+DELIMITER //
+CREATE PROCEDURE modificarFechaParto(
+	IN a_nombreAnimal varchar(10),
+    IN a_fechaUltimoParto date
+)
+BEGIN
+	UPDATE Animal
+		SET fechaUltimoParto = a_fechaUltimoParto
+        where nombreAnimal = a_nombreAnimal;
+END //
+DELIMITER ;
+CALL modificarFechaParto('ENRIQUETA','2024-03-19');
+
+-- RQF043 |Vista para la cantidad de partos que ha tenido el animal
+CREATE VIEW vistaCantPartoAnimal AS
+SELECT nombreAnimal, cantParto
+FROM Animal;
+select * from vistaCantPartoAnimal;
+
+-- RQF044 |Vista para las fechas de partos del animal
+CREATE VIEW vistaFechaAnimal AS
+SELECT nombreAnimal, fechaUltimoParto
+FROM Animal;
+select * from vistaCantPartoAnimal;
+
+-- RQF045 | Delete para los que hayan fallecido
+/Trigger que funciona si se elimina un animal de la tabla Animal/
+CREATE TABLE eliminarAnimal (
+	idDefuncion int AUTO_INCREMENT primary key,
+    nombreAnimal VARCHAR(10) NOT NULL,
+    edadAnimal INT NOT NULL,
+    fechaDefuncion DATE NOT NULL
+);
+
+DELIMITER //
+CREATE TRIGGER defuncionAnimal
+BEFORE DELETE ON Animal
+FOR EACH ROW
+BEGIN
+    INSERT INTO eliminarAnimal (nombreAnimal, edadAnimal, fechaDefuncion) 
+    VALUES (OLD.nombreAnimal, OLD.edadAnimal, CURDATE());
+END //
+DELIMITER ;
+
+DELETE FROM Animal WHERE idAnimal = 1;
+select * from eliminarAnimal;
