@@ -1,0 +1,1269 @@
+use fincaelCedro
+switched to db fincaelCedro
+db.createCollection('Usuarios')
+{ ok: 1 }
+db.Usuarios.insertMany([{
+  "_id":"681b91dab1ce710ac7d923e2",
+  "Cedula": 7310098,
+  "Nombre": "William Salvador Gómez",
+  "Cargo": "Administrador",
+  "Correo": "willysgomezs@hotmail.com",
+  "Descripción": "Encargado del manejo financiero y logistico de la finca",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923e3",
+  "Cedula": 1013259709,
+  "Nombre": "Juan Pablo Gómez",
+  "Cargo": "Desarrollador y Analista de datos",
+  "Correo": "juanpablo.gomezb@urosario.edu.co",
+  "Descripción": "Encargado el desarrollo del proyecto y el analisis de los datos para cumplir con los requerimientos solicitados por el cliente",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923e4",
+  "Cedula": 1000077838,
+  "Nombre": "Ana Maria Triviño",
+  "Cargo": "Desarrollador y Analista de datos",
+  "Correo": "ana.trivino@urosario.edu.co",
+  "Descripción": "Encargado el desarrollo del proyecto y el analisis de los datos para cumplir con los requerimientos solicitados por el cliente",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923e5",
+  "Cedula": 1000035548,
+  "Nombre": "Santiago Mora Camacho",
+  "Cargo": "Desarrollador y Analista de datos",
+  "Correo": "santiago.moraca@urosario.edu.co",
+  "Descripción": "Encargado el desarrollo del proyecto y el analisis de los datos para cumplir con los requerimientos solicitados por el cliente",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923e6",
+  "Cedula": 46675765,
+  "Nombre": "Pedro Rivera",
+  "Cargo": "Trabajador Agricola",
+  "Correo": "rivpedro@gmail.com",
+  "Descripción": "Encargado del funcionamiento tecnico de la finca y de los ordeños",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923e7",
+  "Cedula": 78597054,
+  "Nombre": "Idinael Martinez",
+  "Cargo": "Trabajador Agricola",
+  "Correo": "maridinael@gmail.com",
+  "Descripción": "Encargado del funcionamiento tecnico de la finca y de los ordeños",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923e8",
+  "Cedula": 23481984,
+  "Nombre": "Maria Luisa Saavedra",
+  "Cargo": "Dueña",
+  "Correo": "saavmaria@gmail.com",
+  "Descripción": "Toma de decisiones importantes sobre la finca",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923e9",
+  "Cedula": 15216545,
+  "Nombre": "Luis Eduardo Gómez",
+  "Cargo": "Dueño",
+  "Correo": "gomezeduardo@gmail.com",
+  "Descripción": "Toma de decisiones imortantes sobre la finca",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923ea",
+  "Cedula": 54984877,
+  "Nombre": "Ferney Rodrigues",
+  "Cargo": "Veterinario",
+  "Correo": "rodriferney@gmail.com",
+  "Descripción": "Encargado de la salud de los animales y del tema reproductivo de los mismos",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923eb",
+  "Cedula": 85132149,
+  "Nombre": "Tatiana Lizbeth Cabrera",
+  "Cargo": "Gerente de tecnología",
+  "Correo": "tatianal.cabrera@urosario.edu.co",
+  "Descripción": "Encargada de la supervisión del proyecto",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923ec",
+  "Cedula": 67890123,
+  "Nombre": "Miguel Ángel Torres",
+  "Cargo": "Administrador",
+  "Correo": "miguel.torres@gmail.com",
+  "Descripción": "Gestión administrativa de la finca",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923ed",
+  "Cedula": 78901234,
+  "Nombre": "Carolina López",
+  "Cargo": "Gerente de recursos",
+  "Correo": "carolina.lopez@gmail.com",
+  "Descripción": "Supervisión y optimización de recursos disponibles",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923ee",
+  "Cedula": 89012345,
+  "Nombre": "Fernando Vargas",
+  "Cargo": "Veterinario",
+  "Correo": "fernando.vargas@gmail.com",
+  "Descripción": "Responsable de la salud de los animales",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923ef",
+  "Cedula": 90123456,
+  "Nombre": "Luisa Martínez",
+  "Cargo": "Dueña",
+  "Correo": "luisa.martinez@gmail.com",
+  "Descripción": "Decisiones estratégicas sobre la finca",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f0",
+  "Cedula": 12345000,
+  "Nombre": "José Rodríguez",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "jose.rodriguez@gmail.com",
+  "Descripción": "Apoyo en tareas técnicas y mantenimiento",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f1",
+  "Cedula": 23456100,
+  "Nombre": "Paula Castro",
+  "Cargo": "Desarrolladora",
+  "Correo": "paula.castro@gmail.com",
+  "Descripción": "Desarrollo de software para optimización agrícola",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f2",
+  "Cedula": 34561234,
+  "Nombre": "David Gómez",
+  "Cargo": "Analista de datos",
+  "Correo": "david.gomez@gmail.com",
+  "Descripción": "Análisis de datos para mejorar procesos",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f3",
+  "Cedula": 45612345,
+  "Nombre": "Alejandra Hernández",
+  "Cargo": "Gerente de tecnología",
+  "Correo": "alejandra.hernandez@gmail.com",
+  "Descripción": "Supervisión tecnológica de proyectos",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f4",
+  "Cedula": 56712345,
+  "Nombre": "Ricardo Pérez",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "ricardo.perez@gmail.com",
+  "Descripción": "Encargado del funcionamiento técnico de la finca",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f5",
+  "Cedula": 67812345,
+  "Nombre": "Carmen Cruz",
+  "Cargo": "Veterinaria",
+  "Correo": "carmen.cruz@gmail.com",
+  "Descripción": "Responsable de la salud de los animales y reproducción",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f6",
+  "Cedula": 78912345,
+  "Nombre": "Gabriel Ortiz",
+  "Cargo": "Administrador",
+  "Correo": "gabriel.ortiz@gmail.com",
+  "Descripción": "Gestión financiera de la finca",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f7",
+  "Cedula": 89012349,
+  "Nombre": "Sofia Moreno",
+  "Cargo": "Dueña",
+  "Correo": "sofia.moreno@gmail.com",
+  "Descripción": "Decisiones clave sobre la finca",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f8",
+  "Cedula": 90123446,
+  "Nombre": "Marcela Reyes",
+  "Cargo": "Gerente de logística",
+  "Correo": "marcela.reyes@gmail.com",
+  "Descripción": "Supervisión del transporte y suministro",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923f9",
+  "Cedula": 23456752,
+  "Nombre": "Esteban Alarcón",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "esteban.alarcon@gmail.com",
+  "Descripción": "Responsable de tareas técnicas diarias",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923fa",
+  "Cedula": 34567821,
+  "Nombre": "Isabel Fernández",
+  "Cargo": "Desarrolladora y Analista",
+  "Correo": "isabel.fernandez@gmail.com",
+  "Descripción": "Análisis técnico de datos agrícolas",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923fb",
+  "Cedula": 45678905,
+  "Nombre": "Antonio Ruiz",
+  "Cargo": "Veterinario",
+  "Correo": "antonio.ruiz@gmail.com",
+  "Descripción": "Revisión y salud de animales",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923fc",
+  "Cedula": 56789028,
+  "Nombre": "Camila Vargas",
+  "Cargo": "Dueña",
+  "Correo": "camila.vargas@gmail.com",
+  "Descripción": "Responsable de decisiones estratégicas",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923fd",
+  "Cedula": 67890132,
+  "Nombre": "Hugo Salazar",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "hugo.salazar@gmail.com",
+  "Descripción": "Encargado de tareas técnicas",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923fe",
+  "Cedula": 78901258,
+  "Nombre": "Vanesa Pardo",
+  "Cargo": "Gerente de tecnología",
+  "Correo": "vanesa.pardo@gmail.com",
+  "Descripción": "Encargada de supervisión tecnológica",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d923ff",
+  "Cedula": 89012384,
+  "Nombre": "Julian Cifuentes",
+  "Cargo": "Administrador",
+  "Correo": "julian.cifuentes@gmail.com",
+  "Descripción": "Gestión administrativa de la finca",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92400",
+  "Cedula": 90123496,
+  "Nombre": "Laura Mejía",
+  "Cargo": "Veterinaria",
+  "Correo": "laura.mejia@gmail.com",
+  "Descripción": "Responsable de salud animal",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92401",
+  "Cedula": 12345637,
+  "Nombre": "Santiago Valencia",
+  "Cargo": "Analista de datos",
+  "Correo": "santiago.valencia@gmail.com",
+  "Descripción": "Análisis para optimización de procesos",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92402",
+  "Cedula": 23456764,
+  "Nombre": "Silvia González",
+  "Cargo": "Desarrolladora y Analista",
+  "Correo": "silvia.gonzalez@gmail.com",
+  "Descripción": "Desarrollo técnico para mejoras agrícolas",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92403",
+  "Cedula": 34567881,
+  "Nombre": "Alfredo García",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "alfredo.garcia@gmail.com",
+  "Descripción": "Mantenimiento técnico de la finca",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92404",
+  "Cedula": 45678976,
+  "Nombre": "Patricia Delgado",
+  "Cargo": "Dueña",
+  "Correo": "patricia.delgado@gmail.com",
+  "Descripción": "Decisiones clave sobre la finca",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92405",
+  "Cedula": 56789542,
+  "Nombre": "Oscar Peña",
+  "Cargo": "Veterinario",
+  "Correo": "oscar.pena@gmail.com",
+  "Descripción": "Revisión de salud y reproducción de animales",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92406",
+  "Cedula": 67890378,
+  "Nombre": "Daniela Ríos",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "daniela.rios@gmail.com",
+  "Descripción": "Apoyo en tareas técnicas agrícolas",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92407",
+  "Cedula": 95654132,
+  "Nombre": "Carlos Blanco",
+  "Cargo": "Administrador",
+  "Correo": "carlos.blanco@gmail.com",
+  "Descripción": "Gestión logística y financiera",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92408",
+  "Cedula": 23151841,
+  "Nombre": "Valeria Muñoz",
+  "Cargo": "Gerente de recursos",
+  "Correo": "valeria.munoz@gmail.com",
+  "Descripción": "Optimización de recursos y supervisión",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92409",
+  "Cedula": 96518812,
+  "Nombre": "Sebastián Torres",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "sebastian.torres@gmail.com",
+  "Descripción": "Encargado del funcionamiento técnico diario",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d9240a",
+  "Cedula": 65468123,
+  "Nombre": "Natalia Morales",
+  "Cargo": "Veterinaria",
+  "Correo": "natalia.morales@gmail.com",
+  "Descripción": "Responsable de la salud y bienestar animal",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d9240b",
+  "Cedula": 28735688,
+  "Nombre": "Edgar Cuellar",
+  "Cargo": "Analista de datos",
+  "Correo": "edgar.cuellar@gmail.com",
+  "Descripción": "Análisis de datos para decisiones agrícolas",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d9240c",
+  "Cedula": 21351325,
+  "Nombre": "Manuela Nieto",
+  "Cargo": "Desarrolladora y Analista",
+  "Correo": "manuela.nieto@gmail.com",
+  "Descripción": "Mejoras técnicas en procesos agrícolas",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d9240d",
+  "Cedula": 13554758,
+  "Nombre": "Fabio Silva",
+  "Cargo": "Veterinario",
+  "Correo": "fabio.silva@gmail.com",
+  "Descripción": "Cuidado reproductivo y salud de animales",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d9240e",
+  "Cedula": 16554213,
+  "Nombre": "Claudia Vargas",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "claudia.vargas@gmail.com",
+  "Descripción": "Apoyo técnico y operativo en la finca",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d9240f",
+  "Cedula": 65668410,
+  "Nombre": "Guillermo Hernández",
+  "Cargo": "Gerente de tecnología",
+  "Correo": "guillermo.hernandez@gmail.com",
+  "Descripción": "Supervisión y desarrollo tecnológico",
+  "Estado": "Activo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92410",
+  "Cedula": 65418948,
+  "Nombre": "Andrea Ramírez",
+  "Cargo": "Veterinaria",
+  "Correo": "andrea.ramirez@gmail.com",
+  "Descripción": "Encargada de salud animal y reproducción",
+  "Estado": "Inactivo"
+},
+{
+  "_id":"681b91dab1ce710ac7d92411",
+  "Cedula": 23265911,
+  "Nombre": "Roberto Pérez",
+  "Cargo": "Trabajador Agrícola",
+  "Correo": "roberto.perez@gmail.com",
+  "Descripción": "Tareas técnicas y mantenimiento agrícola",
+  "Estado": "Activo"
+}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': '681b91dab1ce710ac7d923e2',
+    '1': '681b91dab1ce710ac7d923e3',
+    '2': '681b91dab1ce710ac7d923e4',
+    '3': '681b91dab1ce710ac7d923e5',
+    '4': '681b91dab1ce710ac7d923e6',
+    '5': '681b91dab1ce710ac7d923e7',
+    '6': '681b91dab1ce710ac7d923e8',
+    '7': '681b91dab1ce710ac7d923e9',
+    '8': '681b91dab1ce710ac7d923ea',
+    '9': '681b91dab1ce710ac7d923eb',
+    '10': '681b91dab1ce710ac7d923ec',
+    '11': '681b91dab1ce710ac7d923ed',
+    '12': '681b91dab1ce710ac7d923ee',
+    '13': '681b91dab1ce710ac7d923ef',
+    '14': '681b91dab1ce710ac7d923f0',
+    '15': '681b91dab1ce710ac7d923f1',
+    '16': '681b91dab1ce710ac7d923f2',
+    '17': '681b91dab1ce710ac7d923f3',
+    '18': '681b91dab1ce710ac7d923f4',
+    '19': '681b91dab1ce710ac7d923f5',
+    '20': '681b91dab1ce710ac7d923f6',
+    '21': '681b91dab1ce710ac7d923f7',
+    '22': '681b91dab1ce710ac7d923f8',
+    '23': '681b91dab1ce710ac7d923f9',
+    '24': '681b91dab1ce710ac7d923fa',
+    '25': '681b91dab1ce710ac7d923fb',
+    '26': '681b91dab1ce710ac7d923fc',
+    '27': '681b91dab1ce710ac7d923fd',
+    '28': '681b91dab1ce710ac7d923fe',
+    '29': '681b91dab1ce710ac7d923ff',
+    '30': '681b91dab1ce710ac7d92400',
+    '31': '681b91dab1ce710ac7d92401',
+    '32': '681b91dab1ce710ac7d92402',
+    '33': '681b91dab1ce710ac7d92403',
+    '34': '681b91dab1ce710ac7d92404',
+    '35': '681b91dab1ce710ac7d92405',
+    '36': '681b91dab1ce710ac7d92406',
+    '37': '681b91dab1ce710ac7d92407',
+    '38': '681b91dab1ce710ac7d92408',
+    '39': '681b91dab1ce710ac7d92409',
+    '40': '681b91dab1ce710ac7d9240a',
+    '41': '681b91dab1ce710ac7d9240b',
+    '42': '681b91dab1ce710ac7d9240c',
+    '43': '681b91dab1ce710ac7d9240d',
+    '44': '681b91dab1ce710ac7d9240e',
+    '45': '681b91dab1ce710ac7d9240f',
+    '46': '681b91dab1ce710ac7d92410',
+    '47': '681b91dab1ce710ac7d92411'
+  }
+}
+db.Usuarios.find()
+{
+  _id: '681b91dab1ce710ac7d923e2',
+  Cedula: 7310098,
+  Nombre: 'William Salvador Gómez',
+  Cargo: 'Administrador',
+  Correo: 'willysgomezs@hotmail.com',
+  'Descripción': 'Encargado del manejo financiero y logistico de la finca',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923e3',
+  Cedula: 1013259709,
+  Nombre: 'Juan Pablo Gómez',
+  Cargo: 'Desarrollador y Analista de datos',
+  Correo: 'juanpablo.gomezb@urosario.edu.co',
+  'Descripción': 'Encargado el desarrollo del proyecto y el analisis de los datos para cumplir con los requerimientos solicitados por el cliente',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923e4',
+  Cedula: 1000077838,
+  Nombre: 'Ana Maria Triviño',
+  Cargo: 'Desarrollador y Analista de datos',
+  Correo: 'ana.trivino@urosario.edu.co',
+  'Descripción': 'Encargado el desarrollo del proyecto y el analisis de los datos para cumplir con los requerimientos solicitados por el cliente',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923e5',
+  Cedula: 1000035548,
+  Nombre: 'Santiago Mora Camacho',
+  Cargo: 'Desarrollador y Analista de datos',
+  Correo: 'santiago.moraca@urosario.edu.co',
+  'Descripción': 'Encargado el desarrollo del proyecto y el analisis de los datos para cumplir con los requerimientos solicitados por el cliente',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923e6',
+  Cedula: 46675765,
+  Nombre: 'Pedro Rivera',
+  Cargo: 'Trabajador Agricola',
+  Correo: 'rivpedro@gmail.com',
+  'Descripción': 'Encargado del funcionamiento tecnico de la finca y de los ordeños',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923e7',
+  Cedula: 78597054,
+  Nombre: 'Idinael Martinez',
+  Cargo: 'Trabajador Agricola',
+  Correo: 'maridinael@gmail.com',
+  'Descripción': 'Encargado del funcionamiento tecnico de la finca y de los ordeños',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923e8',
+  Cedula: 23481984,
+  Nombre: 'Maria Luisa Saavedra',
+  Cargo: 'Dueña',
+  Correo: 'saavmaria@gmail.com',
+  'Descripción': 'Toma de decisiones importantes sobre la finca',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923e9',
+  Cedula: 15216545,
+  Nombre: 'Luis Eduardo Gómez',
+  Cargo: 'Dueño',
+  Correo: 'gomezeduardo@gmail.com',
+  'Descripción': 'Toma de decisiones imortantes sobre la finca',
+  Estado: 'Inactivo'
+}
+{
+  _id: '681b91dab1ce710ac7d923ea',
+  Cedula: 54984877,
+  Nombre: 'Ferney Rodrigues',
+  Cargo: 'Veterinario',
+  Correo: 'rodriferney@gmail.com',
+  'Descripción': 'Encargado de la salud de los animales y del tema reproductivo de los mismos',
+  Estado: 'Inactivo'
+}
+{
+  _id: '681b91dab1ce710ac7d923eb',
+  Cedula: 85132149,
+  Nombre: 'Tatiana Lizbeth Cabrera',
+  Cargo: 'Gerente de tecnología',
+  Correo: 'tatianal.cabrera@urosario.edu.co',
+  'Descripción': 'Encargada de la supervisión del proyecto',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923ec',
+  Cedula: 67890123,
+  Nombre: 'Miguel Ángel Torres',
+  Cargo: 'Administrador',
+  Correo: 'miguel.torres@gmail.com',
+  'Descripción': 'Gestión administrativa de la finca',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923ed',
+  Cedula: 78901234,
+  Nombre: 'Carolina López',
+  Cargo: 'Gerente de recursos',
+  Correo: 'carolina.lopez@gmail.com',
+  'Descripción': 'Supervisión y optimización de recursos disponibles',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923ee',
+  Cedula: 89012345,
+  Nombre: 'Fernando Vargas',
+  Cargo: 'Veterinario',
+  Correo: 'fernando.vargas@gmail.com',
+  'Descripción': 'Responsable de la salud de los animales',
+  Estado: 'Inactivo'
+}
+{
+  _id: '681b91dab1ce710ac7d923ef',
+  Cedula: 90123456,
+  Nombre: 'Luisa Martínez',
+  Cargo: 'Dueña',
+  Correo: 'luisa.martinez@gmail.com',
+  'Descripción': 'Decisiones estratégicas sobre la finca',
+  Estado: 'Inactivo'
+}
+{
+  _id: '681b91dab1ce710ac7d923f0',
+  Cedula: 12345000,
+  Nombre: 'José Rodríguez',
+  Cargo: 'Trabajador Agrícola',
+  Correo: 'jose.rodriguez@gmail.com',
+  'Descripción': 'Apoyo en tareas técnicas y mantenimiento',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923f1',
+  Cedula: 23456100,
+  Nombre: 'Paula Castro',
+  Cargo: 'Desarrolladora',
+  Correo: 'paula.castro@gmail.com',
+  'Descripción': 'Desarrollo de software para optimización agrícola',
+  Estado: 'Inactivo'
+}
+{
+  _id: '681b91dab1ce710ac7d923f2',
+  Cedula: 34561234,
+  Nombre: 'David Gómez',
+  Cargo: 'Analista de datos',
+  Correo: 'david.gomez@gmail.com',
+  'Descripción': 'Análisis de datos para mejorar procesos',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923f3',
+  Cedula: 45612345,
+  Nombre: 'Alejandra Hernández',
+  Cargo: 'Gerente de tecnología',
+  Correo: 'alejandra.hernandez@gmail.com',
+  'Descripción': 'Supervisión tecnológica de proyectos',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923f4',
+  Cedula: 56712345,
+  Nombre: 'Ricardo Pérez',
+  Cargo: 'Trabajador Agrícola',
+  Correo: 'ricardo.perez@gmail.com',
+  'Descripción': 'Encargado del funcionamiento técnico de la finca',
+  Estado: 'Activo'
+}
+{
+  _id: '681b91dab1ce710ac7d923f5',
+  Cedula: 67812345,
+  Nombre: 'Carmen Cruz',
+  Cargo: 'Veterinaria',
+  Correo: 'carmen.cruz@gmail.com',
+  'Descripción': 'Responsable de la salud de los animales y reproducción',
+  Estado: 'Inactivo'
+}
+Type "it" for more
+db.Usuarios.findOne({Nombre:'William Salvador Gómez'},{_id:1})
+{
+  _id: '681b91dab1ce710ac7d923e2'
+}
+db.createCollection('UsuariosEliminados')
+{ ok: 1 }
+db.Usuarios.findOne({Nombre:'William Salvador Gómez'},{_id:1,Nombre:1})
+{
+  _id: '681b91dab1ce710ac7d923e2',
+  Nombre: 'William Salvador Gómez'
+}
+db.Usuarios.findMany({cargo:'Trabajador Agrícola'},{cargo:'Veterinario'},{Nombre:1})
+TypeError: db.Usuarios.findMany is not a function
+db.Usuarios.findMany({cargo:'Trabajador Agrícola'},{Nombre:1})
+TypeError: db.Usuarios.findMany is not a function
+db.Usuarios.findMany([{cargo:'Trabajador Agrícola'},{cargo:'Veterinario'},{Nombre:1}])
+TypeError: db.Usuarios.findMany is not a function
+db.Usuarios.find({cargo:'Trabajador Agrícola'},{cargo:'Veterinario'},{Nombre:1})
+db.Usuarios.find({cargo:'Trabajador Agrícola'},{Nombre:1})
+db.Usuarios.findOne({cargo:'Trabajador Agrícola'},{Nombre:1})
+null
+db.Usuarios.findOne({cargo:'Trabajador Agrícola'},{Nombre:1})
+null
+db.Usuarios.findOne({cargo:'Trabajador Agrícola'},{_id:1,Nombre:1})
+null
+db.Usuarios.findOne({Cargo:'Trabajador Agrícola'},{_id:1,Nombre:1})
+{
+  _id: '681b91dab1ce710ac7d923f0',
+  Nombre: 'José Rodríguez'
+}
+db.Usuarios.find({cargo:'Trabajador Agrícola'},{Nombre:1})
+db.usuarios.find(
+  { Cargo: "Trabajador Agrícola" },
+  { Nombre: 1, Cargo: 1, _id: 0 }
+)
+db.Usuarios.find(
+  { Cargo: "Trabajador Agrícola" },
+  { Nombre: 1, Cargo: 1, _id: 0 }
+SyntaxError: Unexpected token, expected "," (3:33)
+
+[0m [90m 1 |[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfind(
+ [90m 2 |[39m   { [33mCargo[39m[33m:[39m [32m"Trabajador Agrícola"[39m }[33m,[39m
+[31m[1m>[22m[39m[90m 3 |[39m   { [33mNombre[39m[33m:[39m [35m1[39m[33m,[39m [33mCargo[39m[33m:[39m [35m1[39m[33m,[39m _id[33m:[39m [35m0[39m }
+ [90m   |[39m                                  [31m[1m^[22m[39m[0m
+db.Usuarios.find(
+  { Cargo: "Trabajador Agrícola" },
+  { Nombre: 1, Cargo: 1, _id: 0 }
+)
+{
+  Nombre: 'José Rodríguez',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  Nombre: 'Ricardo Pérez',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  Nombre: 'Esteban Alarcón',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  Nombre: 'Hugo Salazar',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  Nombre: 'Alfredo García',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  Nombre: 'Daniela Ríos',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  Nombre: 'Sebastián Torres',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  Nombre: 'Claudia Vargas',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  Nombre: 'Roberto Pérez',
+  Cargo: 'Trabajador Agrícola'
+}
+db.Usuarios.find({$or:[{ Cargo: "Trabajador Agrícola" },{Cargo:'Trabajador Agricola'}}],{ _id: 1, Nombre: 1, Cargo: 1}
+)
+SyntaxError: Unexpected token, expected "," (1:85)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfind({$or[33m:[39m[{ [33mCargo[39m[33m:[39m [32m"Trabajador Agrícola"[39m }[33m,[39m{[33mCargo[39m[33m:[39m[32m'Trabajador Agricola'[39m}}][33m,[39m{ _id[33m:[39m [35m1[39m[33m,[39m [33mNombre[39m[33m:[39m [35m1[39m[33m,[39m [33mCargo[39m[33m:[39m [35m1[39m}
+ [90m   |[39m                                                                                      [31m[1m^[22m[39m
+ [90m 2 |[39m )[0m
+db.Usuarios.find({$or:{{ Cargo: "Trabajador Agrícola" },{Cargo:'Trabajador Agricola'}}},{ _id: 1, Nombre: 1, Cargo: 1)
+SyntaxError: Unexpected token (1:23)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfind({$or[33m:[39m{{ [33mCargo[39m[33m:[39m [32m"Trabajador Agrícola"[39m }[33m,[39m{[33mCargo[39m[33m:[39m[32m'Trabajador Agricola'[39m}}}[33m,[39m{ _id[33m:[39m [35m1[39m[33m,[39m [33mNombre[39m[33m:[39m [35m1[39m[33m,[39m [33mCargo[39m[33m:[39m [35m1[39m)
+ [90m   |[39m                        [31m[1m^[22m[39m[0m
+db.Usuarios.find({$or:{{ Cargo: "Trabajador Agrícola" },{Cargo:'Trabajador Agricola'}}},{ _id: 1, Nombre: 1, Cargo: 1})
+SyntaxError: Unexpected token (1:23)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfind({$or[33m:[39m{{ [33mCargo[39m[33m:[39m [32m"Trabajador Agrícola"[39m }[33m,[39m{[33mCargo[39m[33m:[39m[32m'Trabajador Agricola'[39m}}}[33m,[39m{ _id[33m:[39m [35m1[39m[33m,[39m [33mNombre[39m[33m:[39m [35m1[39m[33m,[39m [33mCargo[39m[33m:[39m [35m1[39m})
+ [90m   |[39m                        [31m[1m^[22m[39m[0m
+db.Usuarios.find({$or:[{ Cargo: "Trabajador Agrícola" },{Cargo:'Trabajador Agricola'}]},{ _id: 1, Nombre: 1, Cargo: 1})
+{
+  _id: '681b91dab1ce710ac7d923e6',
+  Nombre: 'Pedro Rivera',
+  Cargo: 'Trabajador Agricola'
+}
+{
+  _id: '681b91dab1ce710ac7d923e7',
+  Nombre: 'Idinael Martinez',
+  Cargo: 'Trabajador Agricola'
+}
+{
+  _id: '681b91dab1ce710ac7d923f0',
+  Nombre: 'José Rodríguez',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  _id: '681b91dab1ce710ac7d923f4',
+  Nombre: 'Ricardo Pérez',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  _id: '681b91dab1ce710ac7d923f9',
+  Nombre: 'Esteban Alarcón',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  _id: '681b91dab1ce710ac7d923fd',
+  Nombre: 'Hugo Salazar',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  _id: '681b91dab1ce710ac7d92403',
+  Nombre: 'Alfredo García',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  _id: '681b91dab1ce710ac7d92406',
+  Nombre: 'Daniela Ríos',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  _id: '681b91dab1ce710ac7d92409',
+  Nombre: 'Sebastián Torres',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  _id: '681b91dab1ce710ac7d9240e',
+  Nombre: 'Claudia Vargas',
+  Cargo: 'Trabajador Agrícola'
+}
+{
+  _id: '681b91dab1ce710ac7d92411',
+  Nombre: 'Roberto Pérez',
+  Cargo: 'Trabajador Agrícola'
+}
+db.Usuarios.find({Nombre:'William Salvador Gómez'},{Nombre:1,_id:1,Descripción:1})
+{
+  _id: '681b91dab1ce710ac7d923e2',
+  Nombre: 'William Salvador Gómez',
+  'Descripción': 'Encargado del manejo financiero y logistico de la finca'
+}
+db.Usuarios.find({Nombre:'William Salvador Gómez'},{Nombre:1,_id:1,Estado:1})
+{
+  _id: '681b91dab1ce710ac7d923e2',
+  Nombre: 'William Salvador Gómez',
+  Estado: 'Activo'
+}
+db.Usuarios.updateOne({Nombre:'William Salvador Gómez'},{$set:{Correo:'willygom@gmail.com'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.Usuarios.updateOne({Nombre:'William Salvador Gómez'},{$set:{Cargo:'Dueño'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.Usuarios.updateOne({Nombre:'William Salvador Gómez'},{$set:{Estado:'Inactivo'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+if (user) {
+  db.UsuariosEliminados.insertOne(user);
+  db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+}
+var user = db.Usuarios.findOne({ _id:"681b91dab1ce710ac7d923e3") });
+if (user) {db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:"681b91dab1ce710ac7d923e3"});
+SyntaxError: Unexpected token, expected "," (1:63)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mvar[39m user [33m=[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfindOne({ _id[33m:[39m[32m"681b91dab1ce710ac7d923e3"[39m) })[33m;[39m
+ [90m   |[39m                                                                [31m[1m^[22m[39m
+ [90m 2 |[39m [36mif[39m (user) {db[33m.[39m[33mUsuariosEliminados[39m[33m.[39minsertOne(user)[33m;[39m db[33m.[39m[33mUsuarios[39m[33m.[39mdeleteOne({ _id[33m:[39m[32m"681b91dab1ce710ac7d923e3"[39m})[33m;[39m[0m
+var user = db.Usuarios.findOne({ _id:"681b91dab1ce710ac7d923e3") });
+if (user) {db.UsuariosEliminados.insertOne(user), db.Usuarios.deleteOne({ _id:"681b91dab1ce710ac7d923e3"});
+SyntaxError: Unexpected token, expected "," (1:63)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mvar[39m user [33m=[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfindOne({ _id[33m:[39m[32m"681b91dab1ce710ac7d923e3"[39m) })[33m;[39m
+ [90m   |[39m                                                                [31m[1m^[22m[39m
+ [90m 2 |[39m [36mif[39m (user) {db[33m.[39m[33mUsuariosEliminados[39m[33m.[39minsertOne(user)[33m,[39m db[33m.[39m[33mUsuarios[39m[33m.[39mdeleteOne({ _id[33m:[39m[32m"681b91dab1ce710ac7d923e3"[39m})[33m;[39m[0m
+var user = db.Usuarios.findOne({ _id:"681b91dab1ce710ac7d923e3") }),
+if (user) {db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:"681b91dab1ce710ac7d923e3"});
+SyntaxError: Unexpected token, expected "," (1:63)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mvar[39m user [33m=[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfindOne({ _id[33m:[39m[32m"681b91dab1ce710ac7d923e3"[39m) })[33m,[39m
+ [90m   |[39m                                                                [31m[1m^[22m[39m
+ [90m 2 |[39m [36mif[39m (user) {db[33m.[39m[33mUsuariosEliminados[39m[33m.[39minsertOne(user)[33m;[39m db[33m.[39m[33mUsuarios[39m[33m.[39mdeleteOne({ _id[33m:[39m[32m"681b91dab1ce710ac7d923e3"[39m})[33m;[39m[0m
+var user = db.Usuarios.findOne({ _id:"681b91dab1ce710ac7d923e3"});
+if (user) {db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:"681b91dab1ce710ac7d923e3"});
+SyntaxError: Unexpected token (2:107)
+
+[0m [90m 1 |[39m [36mvar[39m user [33m=[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfindOne({ _id[33m:[39m[32m"681b91dab1ce710ac7d923e3"[39m})[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mif[39m (user) {db[33m.[39m[33mUsuariosEliminados[39m[33m.[39minsertOne(user)[33m;[39m db[33m.[39m[33mUsuarios[39m[33m.[39mdeleteOne({ _id[33m:[39m[32m"681b91dab1ce710ac7d923e3"[39m})[33m;[39m
+ [90m   |[39m                                                                                                            [31m[1m^[22m[39m[0m
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+if (user) {db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });}
+db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+if (user) {db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") })};
+null
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+if (user) {db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });}
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+if (user) {db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") })};
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+if (user) {db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") })};
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+
+if (user) {
+  print("Usuario encontrado");
+  db.UsuariosEliminados.insertOne(user);
+  print("Usuario insertado en UsuariosEliminados");
+}
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d923e3") });
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d923e3")});}
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d92411") });
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d92411")});}
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d92411") });
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d92411")})};
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+var user = db.Usuarios.findOne({ _id: ObjectId("681b91dab1ce710ac7d92411") });
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id: ObjectId("681b91dab1ce710ac7d92411")});
+SyntaxError: Unexpected token (2:108)
+
+[0m [90m 1 |[39m [36mvar[39m user [33m=[39m db[33m.[39m[33mUsuarios[39m[33m.[39mfindOne({ _id[33m:[39m [33mObjectId[39m([32m"681b91dab1ce710ac7d92411"[39m) })[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m {db[33m.[39m[33mUsuariosEliminados[39m[33m.[39minsertOne(user)[33m;[39m db[33m.[39m[33mUsuarios[39m[33m.[39mdeleteOne({ _id[33m:[39m [33mObjectId[39m([32m"681b91dab1ce710ac7d92411"[39m)})[33m;[39m
+ [90m   |[39m                                                                                                             [31m[1m^[22m[39m[0m
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923e2")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923e2")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.Usuarios.insertMany([{
+  "_id":"681b91dab1ce710ac7d923e2",
+  "Cedula": 7310098,
+  "Nombre": "William Salvador Gómez",
+  "Cargo": "Administrador",
+  "Correo": "willysgomezs@hotmail.com",
+  "Descripción": "Encargado del manejo financiero y logistico de la finca",
+  "Estado": "Activo"
+})
+SyntaxError: Unexpected token, expected "," (9:1)
+
+[0m [90m 7 |[39m   [32m"Descripción"[39m[33m:[39m [32m"Encargado del manejo financiero y logistico de la finca"[39m[33m,[39m
+ [90m 8 |[39m   [32m"Estado"[39m[33m:[39m [32m"Activo"[39m
+[31m[1m>[22m[39m[90m 9 |[39m })
+ [90m   |[39m  [31m[1m^[22m[39m[0m
+db.Usuarios.insertOne([{
+  "_id":"681b91dab1ce710ac7d923e2",
+  "Cedula": 7310098,
+  "Nombre": "William Salvador Gómez",
+  "Cargo": "Administrador",
+  "Correo": "willysgomezs@hotmail.com",
+  "Descripción": "Encargado del manejo financiero y logistico de la finca",
+  "Estado": "Activo"
+})
+SyntaxError: Unexpected token, expected "," (9:1)
+
+[0m [90m 7 |[39m   [32m"Descripción"[39m[33m:[39m [32m"Encargado del manejo financiero y logistico de la finca"[39m[33m,[39m
+ [90m 8 |[39m   [32m"Estado"[39m[33m:[39m [32m"Activo"[39m
+[31m[1m>[22m[39m[90m 9 |[39m })
+ [90m   |[39m  [31m[1m^[22m[39m[0m
+db.Usuarios.insertOne([{
+  "_id":"681b91dab1ce710ac7d923e2",
+  "Cedula": 7310098,
+  "Nombre": "William Salvador Gómez",
+  "Cargo": "Administrador",
+  "Correo": "willysgomezs@hotmail.com",
+  "Descripción": "Encargado del manejo financiero y logistico de la finca",
+  "Estado": "Activo"
+},)
+SyntaxError: Unexpected token (9:2)
+
+[0m [90m 7 |[39m   [32m"Descripción"[39m[33m:[39m [32m"Encargado del manejo financiero y logistico de la finca"[39m[33m,[39m
+ [90m 8 |[39m   [32m"Estado"[39m[33m:[39m [32m"Activo"[39m
+[31m[1m>[22m[39m[90m 9 |[39m }[33m,[39m)
+ [90m   |[39m   [31m[1m^[22m[39m[0m
+db.Usuarios.insertOne([{
+  "_id":"681b91dab1ce710ac7d923e2",
+  "Cedula": 7310098,
+  "Nombre": "William Salvador Gómez",
+  "Cargo": "Administrador",
+  "Correo": "willysgomezs@hotmail.com",
+  "Descripción": "Encargado del manejo financiero y logistico de la finca",
+  "Estado": "Activo"
+}])
+{
+  acknowledged: true,
+  insertedId: ObjectId('681fe16919ca41d5975f538e')
+}
+db.Usuarios.findOne({Nombre:'William Salvador Gómez'})
+null
+db.Usuarios.findOne({Cedula:7310098})
+null
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923e3")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923e3")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923e4")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923e4")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923e5")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923e5")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923eb")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923eb")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923ec")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923ec")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923ed")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923ed")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923ee")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923ee")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923ef")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923ef")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f0")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f0")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f1")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f1")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f2")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f2")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f3")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f3")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f4")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f4")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f5")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f5")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f6")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f6")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f7")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f7")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f8")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f8")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923f9")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923f9")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923fa")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923fa")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923fb")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923fb")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923fc")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923fc")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923fd")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923fd")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923fe")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923fe")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d923ff")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d923ff")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92400")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92400")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92401")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92401")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92402")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92402")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92403")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92403")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92404")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92404")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92405")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92405")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92406")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92406")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92407")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92407")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92408")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92408")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92409")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92409")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d9240a")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d9240a")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d9240b")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d9240b")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d9240c")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d9240c")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d9240d")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d9240d")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d9240e")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d9240e")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d9240f")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d9240f")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92410")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92410")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92411")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92411")})};
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+var user = db.Usuarios.findOne({_id:("681b91dab1ce710ac7d92411")});
+{db.UsuariosEliminados.insertOne(user); db.Usuarios.deleteOne({ _id:("681b91dab1ce710ac7d92411")})};
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+fincaelCedro
+
+v
