@@ -887,15 +887,16 @@ BEFORE UPDATE ON Produccion
 FOR EACH ROW
 BEGIN
     IF OLD.cantLitrosMañanaAnimal <> NEW.cantLitrosMañanaAnimal THEN
-        INSERT INTO produccionDefectuosa (fechaRegistro, jornada, Litros)
-        VALUES (OLD.fechaRegistro, 'Mañana', OLD.cantLitrosMañanaAnimal);
+        INSERT INTO produccionDefectuosa (fechaRegistro, jornada, Litros, Descripcion)
+        VALUES (OLD.fechaRegistro, 'Mañana', OLD.cantLitrosMañanaAnimal, 'Producción defectuosa');
     END IF;
     IF OLD.cantLitrosTardeAnimal <> NEW.cantLitrosTardeAnimal THEN
-        INSERT INTO produccionDefectuosa (fechaAfectada, turnoAnulado, litrosAfectados)
-        VALUES (OLD.fechaRegistro, 'Tarde', OLD.cantLitrosTardeAnimal);
+        INSERT INTO produccionDefectuosa (fechaRegistro, jornada, Litros, Descripcion)
+        VALUES (OLD.fechaRegistro, 'Tarde', OLD.cantLitrosTardeAnimal, 'Producción defectuosa');
     END IF;
 END //
 DELIMITER ;
+
 
 DELIMITER //
 CREATE PROCEDURE defectoLactosa(
